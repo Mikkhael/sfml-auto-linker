@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        SFML Linker
+    </header>
+    <main>
+       <fieldset id="pathsSection">
+            <legend>Paths</legend>
+            
+            <label for="projectPath">
+                <span class="pathDescription">Project file path:</span>
+                <input type="file" accept=".cbp" id="projectPath">
+            </label>
+            
+            <label for="sfmlPath">
+                <span class="pathDescription">SFMl folder path:</span>
+                <input type="text" id="sfmlPath">
+            </label>
+       </fieldset>
+       
+       <fieldset id="sfmlVersionSection">
+            <legend>Version</legend>
+           <select name="sfbmlVersion" id="sfbmlVersion">
+               <option value="2.4">2.4.x</option>
+               <option value="2.5">2.5.x</option>
+           </select>
+       </fieldset>
+       
+       <fieldset id="linkingMethodSection">
+            <legend>Linking method</legend>
+            <label for="sLinking">
+                <input type="radio" id="sLinking" name="linkingMethodRadio" checked> Static
+            </label>
+            <label for="dLinking">
+                <input type="radio" id="dLinking" name="linkingMethodRadio"> Dynamic
+            </label>
+       </fieldset>
+       
+       <fieldset id="addictionalModules">
+           <legend>Additional modules</legend>
+           
+           <label for="linkAudio">
+                <input type="checkbox" id="linkAudio"> Include &lt;SFML\Audio&gt;
+            </label>
+            <label for="linkNetwork">
+                <input type="checkbox" id="linkNetwork"> Include &lt;SFML\Network&gt;
+            </label>
+       </fieldset>
+       
+    </main>
+    
+    <section id="infoSection"></section>
+    <input id="linkButton" type="button" value="LINK" />
+    
+</body>
+</html>
