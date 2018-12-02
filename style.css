@@ -3,6 +3,10 @@ body{
     background-color: rgba(0, 102, 255, 0.308);
 }
 
+input[type="text"]{
+    width: 500px;
+}
+
 select{
     width: 300px;
 }
