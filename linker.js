@@ -145,9 +145,9 @@ function modifyXML(xmlData, options){
     removeDependencies(debugLinker);
     removeDependencies(releaseLinker);
     
-    removeIfMatches(compiler,  "Add", "directory", /\/sfml\/.*include/i);
+    removeIfMatches(compiler,  "Add", "directory", /sfml.*include/i);
     appendIfNotExists(compiler, "Add", "directory", options.sfmlDirectory + "include");
-    removeIfMatches(linker,  "Add", "directory", /\/sfml\/.*lib/i);
+    removeIfMatches(linker,  "Add", "directory", /sfml.*lib/i);
     appendIfNotExists(linker,   "Add", "directory", options.sfmlDirectory + "lib");
     
     appendRequiredDependencies(debugLinker, releaseLinker, options);
